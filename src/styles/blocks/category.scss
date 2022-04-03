@@ -1,0 +1,59 @@
+.category {
+  &__images {
+    margin-bottom: 16px;
+
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    @include onTablet {
+      gap: 24px;
+    }
+  }
+
+  &__image {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.05);
+      cursor: zoom-in;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    padding-bottom: 8px;
+
+    border-bottom: 1px solid transparent;
+
+    margin-bottom: 40px;
+
+    color: $page-color;
+
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+
+    transition:
+      color 0.3s linear,
+      border-color 0.3s linear;
+
+    @include onTablet {
+      margin-bottom: 64px;
+
+      font-size: 24px;
+      line-height: 140%;
+
+      &--mb {
+        margin-bottom: 40px;
+      }
+    }
+
+    @include onDesktop {
+      &:hover {
+        color: gray;
+        border-color: gray;
+      }
+    }
+  }
+}

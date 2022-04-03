@@ -1,0 +1,36 @@
+.product-card{
+  @include onDesktop {
+    transition: transform 0.3s linear;
+
+    &:hover {
+      cursor: zoom-in;
+      transform: scale(1.1);
+    }
+  }
+
+  &__image {
+    margin: 0 auto 32px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+  }
+
+  &__description {
+    margin-bottom: 12px;
+
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
+  }
+
+  &__price {
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 700;
+  }
+}
